@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Vision Summit 2024 - Ticket Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="lethabo design studiosss.png"
+        alt="Event Banner"
+        class="banner"
+      />
+      <h1>Creative Vision Summit 2024</h1>
+      <h2>Hosted by Lethabo Design Studio</h2>
+
+      <!-- Ticket Form -->
+      <form id="ticketForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+
+        <label for="email">Email Address:</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="company">Company Name (Optional):</label>
+        <input type="text" id="company" placeholder="Enter your company name" />
+
+        <label for="ticketType">Ticket Type:</label>
+        <select id="ticketType">
+          <option value="General">General Admission</option>
+          <option value="VIP">VIP Pass</option>
+        </select>
+
+        <button type="submit">Generate Ticket</button>
+      </form>
+
+      <div id="ticket" class="hidden">
+        <div id="ticketContent">
+          <img
+            src="lethabo design studiosss.png"
+            alt="Lethabo Design Studio Logo"
+            class="logo"
+          />
+          <h2>🎟️ Creative Vision Summit 2024</h2>
+          <p><strong>Name:</strong> <span id="ticketName"></span></p>
+          <p><strong>Email:</strong> <span id="ticketEmail"></span></p>
+          <p><strong>Company:</strong> <span id="ticketCompany"></span></p>
+          <p>
+            <strong>Ticket Type:</strong> <span id="ticketTypeDisplay"></span>
+          </p>
+          <p><strong>Ticket Number:</strong> <span id="ticketNumber"></span></p>
+          <div id="qrcode"></div>
+          <p><strong>Venue:</strong> Sandton Convention Centre, Johannesburg</p>
+          <p>
+            <strong>Date & Time:</strong> November 16, 2024 | 10:00 AM - 5:00 PM
+          </p>
+        </div>
+        <button id="downloadTicket">Download Ticket</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
